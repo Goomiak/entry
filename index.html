@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EntryPL — Market entry for Poland</title>
+  <meta name="description" content="EntryPL helps manufacturers enter Polish retail chains and marketplaces.">
+  <link rel="alternate" hreflang="pl" href="https://entrypl.com/">
+  <link rel="alternate" hreflang="en" href="https://entrypl.com/en/">
+  <link rel="icon" href="/assets/logo.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>html{scroll-behavior:smooth}</style>
+</head>
+<body class="bg-white text-neutral-900 antialiased">
+  <header class="sticky top-0 bg-white/80 backdrop-blur border-b">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/en/" class="flex items-center gap-2 font-semibold">
+        <img src="/assets/logo.svg" class="w-6 h-6" alt="EntryPL logo">
+        <span>EntryPL</span>
+      </a>
+      <nav class="flex items-center gap-6 text-sm">
+        <a href="#offer" class="hover:opacity-70">Offer</a>
+        <a href="#process" class="hover:opacity-70">Process</a>
+        <a href="#contact" class="px-3 py-1.5 rounded-md border hover:bg-neutral-50">Contact</a>
+        <a href="/" class="text-neutral-500 hover:text-neutral-900" aria-label="Polski">PL</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 py-20 grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+            Bring your products into <span class="underline decoration-4 decoration-indigo-500 underline-offset-4">Polish retail</span>
+          </h1>
+          <p class="mt-5 text-lg text-neutral-600">
+            We work with manufacturers not yet present in Poland. We identify the best channels and negotiate listings with chains and distributors.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#contact" class="px-5 py-3 rounded-md bg-indigo-600 text-white hover:bg-indigo-700">Let's talk</a>
+            <a href="#process" class="px-5 py-3 rounded-md border hover:bg-neutral-50">See the process</a>
+          </div>
+        </div>
+        <div class="relative rounded-2xl border p-6">
+          <ul class="space-y-3 text-sm">
+            <li>• Entry strategy & category fit</li>
+            <li>• PL/EN offers & sales materials</li>
+            <li>• Chain outreach, negotiations, listing</li>
+            <li>• Logistics, labelling, compliance (PL/EU)</li>
+            <li>• Pilot sales and rollout</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="offer" class="border-t bg-neutral-50">
+      <div class="max-w-6xl mx-auto px-4 py-16">
+        <h2 class="text-2xl font-semibold">Offer</h2>
+        <div class="grid md:grid-cols-3 gap-6 mt-6">
+          <div class="p-6 bg-white border rounded-xl">
+            <h3 class="font-medium">Analysis & entry strategy</h3>
+            <p class="text-sm text-neutral-600 mt-2">Demand, competition & pricing; channel selection.</p>
+          </div>
+          <div class="p-6 bg-white border rounded-xl">
+            <h3 class="font-medium">Offer preparation</h3>
+            <p class="text-sm text-neutral-600 mt-2">Translations, product sheets, price lists, decks.</p>
+          </div>
+          <div class="p-6 bg-white border rounded-xl">
+            <h3 class="font-medium">Sales & negotiations</h3>
+            <p class="text-sm text-neutral-600 mt-2">Chain outreach, terms, onboarding.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="border-t">
+      <div class="max-w-6xl mx-auto px-4 py-16">
+        <h2 class="text-2xl font-semibold">Process</h2>
+        <ol class="mt-6 grid md:grid-cols-3 gap-6 list-decimal list-inside">
+          <li class="p-6 border rounded-xl">Qualification of manufacturer & SKUs</li>
+          <li class="p-6 border rounded-xl">Mini audit of Polish pricing & margins</li>
+          <li class="p-6 border rounded-xl">Pilot launch</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="contact" class="border-t bg-neutral-50">
+      <div class="max-w-6xl mx-auto px-4 py-16">
+        <h2 class="text-2xl font-semibold">Contact</h2>
+        <p class="text-neutral-600 mt-2">Write a few lines about your company and products. We respond within 24–48h.</p>
+        <form class="mt-6 grid md:grid-cols-2 gap-4" method="POST" action="https://formspree.io/f/your-id">
+          <input name="company" placeholder="Company" class="border rounded-md p-3" required>
+          <input type="email" name="email" placeholder="Email" class="border rounded-md p-3" required>
+          <input name="website" placeholder="Website (optional)" class="border rounded-md p-3 md:col-span-2">
+          <textarea name="message" placeholder="Describe your products and target" class="border rounded-md p-3 md:col-span-2" rows="5" required></textarea>
+          <button class="px-5 py-3 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 md:col-span-2">Send</button>
+        </form>
+        <p class="text-xs text-neutral-500 mt-3">Replace the form action with your backend (Formspree/Zoho/Workers). No cookies, no tracking.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t">
+    <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-neutral-500 flex items-center justify-between">
+      <p>© <span id="year"></span> EntryPL</p>
+      <a href="/" class="hover:underline">Polski</a>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+</body>
+</html>
